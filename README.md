@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Liang Portfolio
 
-## Getting Started
+双语作品集网站脚手架（Next.js + TypeScript + Tailwind + next-intl）。
 
-First, run the development server:
+## 本地运行
 
 ```bash
+cd ~/Desktop/Liang_portfolio
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+浏览器打开：
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 中文（默认）：http://localhost:3000/zh
+- English：http://localhost:3000/en
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 项目结构
 
-## Learn More
+```
+src/
+  app/[locale]/          # 页面（首页 / 作品 / 关于 / 联系）
+  components/            # UI 组件
+  content/projects/      # 项目数据（JSON，后续可换 MDX）
+  messages/              # 界面文案 zh.json / en.json
+  i18n/                  # 双语路由配置
+public/images/projects/  # 项目封面图
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 导航
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+当前导航仅包含：**作品 · 关于 · 联系**（不含 Play，按你的安排预留）。
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 已安装、待接入
 
-## Deploy on Vercel
+- `gsap` / `@gsap/react` — 滚动与进场动效
+- `lenis` — 平滑滚动（已在 `SmoothScroll` 中启用）
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 下一步建议
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. 在 Figma 定稿后替换 `globals.css` 中的颜色与字体
+2. 把 `content/projects/index.json` 补全为你的真实项目
+3. 封面图放入 `public/images/projects/`
+4. 添加 `/work/[slug]` 案例详情页
+5. 按需接入 GSAP ScrollTrigger
+
+## 部署
+
+推荐 [Vercel](https://vercel.com)：`git push` 后自动构建。

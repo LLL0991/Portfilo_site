@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "title": "Liang Dai — Portfolio 2025",
+    "description": "Portfolio of visual designer Liang Dai: brand, spatial display, illustration, and motion."
+  },
+  "nav": {
+    "work": "Work",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "eyebrow": "Portfolio 2025",
+    "title": "L!ang Dai",
+    "subtitle": "Visual systems for spaces, brands, motion, and AI image workflows: ideas shaped until they can be seen, used, and remembered.",
+    "location": "Shanghai / Visual Artist",
+    "indexLine": "Selected visual direction across display, brand, motion, and AI image workflows.",
+    "ctaWork": "View work",
+    "ctaContact": "Get in touch",
+    "featured": "Featured Work",
+    "viewAll": "View all",
+    "statement": "This is less a grid of projects than a rhythm of scale, image, sequence, and memory.",
+    "chapters": {
+      "display": {
+        "index": "01",
+        "title": "Spatial Display",
+        "description": "Interior art direction and production"
+      },
+      "brand": {
+        "index": "02",
+        "title": "Brand Identity",
+        "description": "Visual systems and product experience"
+      },
+      "motion": {
+        "index": "03",
+        "title": "Motion & More",
+        "description": "Motion design and collaborations"
+      },
+      "personal": {
+        "index": "04",
+        "title": "Personal",
+        "description": "Experiments and self-initiated work"
+      }
+    }
+  },
+  "work": {
+    "title": "Work",
+    "description": "Browse projects by visual direction. Case study pages will be expanded in the next iteration.",
+    "filters": {
+      "all": "All",
+      "display": "Display",
+      "brand": "Brand",
+      "illustration": "Illustration",
+      "motion": "Motion",
+      "personal": "Personal"
+    },
+    "comingSoon": "Case study page coming soon"
+  },
+  "about": {
+    "title": "About",
+    "intro": "Hey, there! I'm Liang Dai, a visual artist based in Shanghai. I work across brand, illustration, spatial graphics, and motion—and recently on design for AI image-generation workflows.",
+    "location": "Shanghai"
+  },
+  "contact": {
+    "title": "Contact",
+    "email": "Email",
+    "phone": "Phone",
+    "hint": "Open to collaborations and new projects."
+  },
+  "footer": {
+    "rights": "© {year} Liang Dai"
+  },
+  "locale": {
+    "zh": "中文",
+    "en": "EN"
+  }
+}

@@ -1,26 +1,231 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #20201f;
+  --foreground: #fff4e4;
+  --muted: #9e978d;
+  --accent: #ff382e;
+  --signal: #d9fb5a;
+  --electric: #274dff;
+  --cyan: #7ef3f0;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-signal: var(--signal);
+  --color-electric: var(--electric);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #20201f;
+    --foreground: #fff4e4;
+    --muted: #a8a095;
+    --accent: #ff382e;
   }
+}
+
+html {
+  scroll-behavior: auto;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+.home-canvas {
+  background-image:
+    radial-gradient(circle, rgba(255, 56, 46, 0.42) 1px, transparent 1.25px),
+    radial-gradient(circle, rgba(126, 243, 240, 0.2) 1px, transparent 1.25px);
+  background-position:
+    0 0,
+    14px 14px;
+  background-size:
+    28px 28px,
+    28px 28px;
+}
+
+::selection {
+  background: var(--signal);
+  color: #20201f;
+}
+
+@layer base {
+  a,
+  button {
+    text-underline-offset: 0.18em;
+  }
+}
+
+@layer components {
+  .button-primary,
+  .button-secondary {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid color-mix(in srgb, var(--foreground) 24%, transparent);
+    padding: 0.85rem 1.1rem;
+    font-size: 0.75rem;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    transition:
+      background-color 180ms ease,
+      border-color 180ms ease,
+      color 180ms ease;
+  }
+
+  .button-primary {
+    background: var(--foreground);
+    color: var(--background);
+  }
+
+  .button-primary:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--background);
+  }
+
+  .button-secondary:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .portfolio-mark {
+    position: relative;
+    display: block;
+    height: 3.4rem;
+    min-width: 0;
+  }
+
+  .portfolio-mark::before,
+  .portfolio-mark::after {
+    position: absolute;
+    content: "";
+    display: block;
+  }
+
+  .portfolio-mark-chip::before {
+    inset: 0.8rem 0.2rem;
+    border: 1px solid rgba(255, 56, 46, 0.82);
+    background: #686868;
+    clip-path: polygon(0 0, 88% 0, 100% 28%, 74% 100%, 0 100%);
+  }
+
+  .portfolio-mark-chip::after {
+    right: 0.9rem;
+    top: 1.1rem;
+    height: 0.6rem;
+    width: 0.6rem;
+    border-radius: 999px;
+    background: rgba(255, 56, 46, 0.78);
+  }
+
+  .portfolio-mark-pill::before {
+    left: 0.4rem;
+    top: 1.2rem;
+    height: 1rem;
+    width: 2.4rem;
+    border-radius: 999px;
+    background: #050505;
+    box-shadow: 0 0 0 1px rgba(255, 56, 46, 0.9);
+  }
+
+  .portfolio-mark-pill::after {
+    left: 1.05rem;
+    top: 1.55rem;
+    height: 0.22rem;
+    width: 1.1rem;
+    border-radius: 999px;
+    background: #ff382e;
+  }
+
+  .portfolio-mark-ticket::before {
+    inset: 0.25rem 0.15rem;
+    border: 1px solid rgba(255, 56, 46, 0.78);
+    background: #342f2c;
+    clip-path: polygon(0 0, 80% 0, 100% 32%, 88% 100%, 0 100%);
+  }
+
+  .portfolio-mark-ticket::after {
+    left: 0.9rem;
+    top: 0.95rem;
+    height: 2rem;
+    width: 0.75rem;
+    background: #ff382e;
+  }
+
+  .portfolio-mark-bolt::before {
+    inset: 0.3rem 0.4rem;
+    background: #746c70;
+    clip-path: polygon(10% 0, 74% 0, 58% 36%, 92% 36%, 38% 100%, 50% 54%, 16% 54%);
+  }
+
+  .portfolio-mark-tag::before {
+    inset: 1.1rem 0.1rem 0.9rem 0.1rem;
+    border: 1px solid #7ef3f0;
+    background: #2c3535;
+    clip-path: polygon(0 16%, 100% 0, 84% 68%, 0 100%);
+  }
+
+  .portfolio-mark-disk::before {
+    left: 50%;
+    top: 50%;
+    height: 2.4rem;
+    width: 2.4rem;
+    border-radius: 999px;
+    background: #111;
+    box-shadow:
+      0 0 0 1px #ff382e,
+      inset 0 0 0 0.5rem #383838,
+      inset 0 0 0 0.9rem #7ef3f0;
+    transform: translate(-50%, -50%);
+  }
+
+  .portfolio-mark-disk::after {
+    left: 50%;
+    top: 50%;
+    height: 0.44rem;
+    width: 0.44rem;
+    border-radius: 999px;
+    background: #fff4e4;
+    transform: translate(-50%, -50%);
+  }
+
+  .portfolio-mark-panel::before {
+    inset: 0.9rem 0.1rem;
+    border: 1px solid #ff382e;
+    background: #382724;
+    clip-path: polygon(0 0, 84% 0, 100% 32%, 82% 100%, 0 100%);
+  }
+
+  .portfolio-mark-bubble::before {
+    inset: 1rem 0.2rem 0.4rem 0.2rem;
+    border: 1px solid #7ef3f0;
+    background: #51615e;
+    clip-path: polygon(0 18%, 74% 18%, 74% 0, 90% 18%, 100% 18%, 100% 100%, 0 100%);
+  }
+
+  .portfolio-mark-bubble::after {
+    right: 0.4rem;
+    top: 0.15rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 999px;
+    background: #7ef3f0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

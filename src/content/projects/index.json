@@ -1,0 +1,70 @@
+[
+  {
+    "slug": "adora-magic-city",
+    "category": "display",
+    "featured": true,
+    "year": 2024,
+    "client": "Adora Magic City",
+    "title": {
+      "zh": "爱达·魔都号陈设设计",
+      "en": "Adora Magic City — Interior Display"
+    },
+    "summary": {
+      "zh": "国产大型邮轮公共空间平面艺术品，美术指导与落地制作。",
+      "en": "Graphic art for public spaces on China's first large cruise ship."
+    },
+    "tags": ["art-direction", "team", "production", "illustration"],
+    "cover": "/images/projects/adora-field.png"
+  },
+  {
+    "slug": "fabrie",
+    "category": "brand",
+    "featured": true,
+    "year": 2023,
+    "client": "Fabrie",
+    "title": {
+      "zh": "Fabrie 品牌视觉升级",
+      "en": "Fabrie Brand Visual Upgrade"
+    },
+    "summary": {
+      "zh": "设计师协作平台的品牌 DNA、延展与产品/运营视觉。",
+      "en": "Brand system, extensions, and product/ops visuals for a design collaboration tool."
+    },
+    "tags": ["brand", "uiux", "motion", "typography"],
+    "cover": "/images/projects/fabrie-field.png"
+  },
+  {
+    "slug": "leefon",
+    "category": "brand",
+    "featured": true,
+    "year": 2023,
+    "client": "Leefon",
+    "title": {
+      "zh": "黎感品牌视觉设计",
+      "en": "Leefon Brand Identity"
+    },
+    "summary": {
+      "zh": "科学护肤品牌的 0-1 视觉体系与电商/社交资产。",
+      "en": "0-to-1 visual system and commerce/social assets for a skincare brand."
+    },
+    "tags": ["brand", "packaging", "illustration", "ecommerce"],
+    "cover": "/images/projects/leefon-field.png"
+  },
+  {
+    "slug": "eleme-motion",
+    "category": "motion",
+    "featured": false,
+    "year": 2022,
+    "client": "Ele.me",
+    "title": {
+      "zh": "饿了么 Motion Graphic",
+      "en": "Ele.me Motion Graphic"
+    },
+    "summary": {
+      "zh": "广告动态图形与团队协作项目。",
+      "en": "Advertising motion graphics — team collaboration."
+    },
+    "tags": ["motion", "team"],
+    "cover": "/images/projects/eleme-field.png"
+  }
+]
