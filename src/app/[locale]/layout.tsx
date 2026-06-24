@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { Geist, Geist_Mono } from "next/font/google";
-import { SiteFooter } from "@/components/layout/SiteFooter";
-import { SmoothScroll } from "@/components/providers/SmoothScroll";
+import { Geist, Geist_Mono, IBM_Plex_Mono, Noto_Sans_SC } from "next/font/google";
+import { EntryLoadingScreen } from "@/components/layout/EntryLoadingScreen";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 
@@ -15,6 +14,18 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const notoSansSc = Noto_Sans_SC({
+  variable: "--font-noto-sans-sc",
+  weight: "100",
+  subsets: ["latin"],
+});
+
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: "--font-ibm-plex-mono",
+  weight: "400",
   subsets: ["latin"],
 });
 
@@ -57,14 +68,12 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${notoSansSc.variable} ${ibmPlexMono.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-background text-foreground">
+        <EntryLoadingScreen />
         <NextIntlClientProvider messages={messages}>
-          <SmoothScroll>
-            <div className="flex min-h-full flex-col">{children}</div>
-            <SiteFooter />
-          </SmoothScroll>
+          <div className="flex min-h-full flex-col">{children}</div>
         </NextIntlClientProvider>
       </body>
     </html>

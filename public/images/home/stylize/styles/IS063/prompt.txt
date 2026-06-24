@@ -1,0 +1,52 @@
+# Style Transfer: Right Image → Left Reference Style
+
+Transform the right image to match the left reference style while preserving the original subject's structure and composition.
+
+## Color & Tone Requirements
+- Avoid yellow/warm casts and dark tones. Keep colors bright and neutral.
+- Use clean, vibrant colors without excessive warmth or darkness.
+- Maintain good contrast and brightness levels.
+
+## Subject Identification & Structure Preservation
+- Strictly preserve the original subject's structure, proportions, and spatial relationships from the source image.
+- Do NOT add, replace, or invent any elements that do not exist in the original image.
+- Maintain original hairstyle, accessories, pose, orientation, and physical characteristics (e.g., bald head stays bald, no added hair).
+
+## Prohibited Content (All Categories)
+- 🚫 Adding people, animals, backgrounds, actions, or poses not present in the original.
+- 🚫 Changing the subject's fundamental appearance or physical attributes.
+- 🚫 For landscape/building/object/virtual item categories: absolutely NO character figures from the reference image.
+- 🚫 For virtual/abstract items: do NOT introduce any characters, people, or creatures from the reference image.
+
+---
+
+## Category-Specific Rules (Choose One)
+
+### Human Subjects
+- Hair: Exaggerate the original hairstyle with cartoon-like volume (straight/curly/bangs/length/color must match the original photo). Optional: add stray hair strands.
+- Face: Mimic the reference's facial features (large anime eyes occupying full face length, single upper eyelash, no nose, small mouth, eyebrows at the top of the head). Eye color must match the original photo.
+- Proportions: Head-to-body ratio 1:2.
+- Size hierarchy: Maintain realistic age-based size relationships. Adults must be larger than children; children must be larger than babies. Do NOT make children/babies larger than adults.
+- Body: Very small upper body; if lower body is visible, make it wide with large shoes.
+- Background: White background outside the edges.
+
+### Pet/Animal Subjects
+- Fur: Exaggerate the original fur style with cartoon-like volume (straight/curly/bangs/length/color must match the original photo). Optional: add stray fur strands.
+- Face: Mimic the reference's facial features (large anime eyes occupying full face length, single upper eyelash, no nose, small mouth, eyebrows at the top of the head). Eye color must match the original photo.
+- Proportions: Head-to-body ratio 1:1.5.
+- Body: Very small upper body; if lower body is visible, make it wide with large paws.
+- Background: White background outside the edges.
+
+### Landscape/Scenery
+- Geometry: Simplify and geometrize scenery while preserving basic composition. Enlarge large color blocks, shorten long color blocks.
+- Colors: Reference the left image's color palette.
+- Background: White background; NO transparent background.
+- Prohibition: Absolutely NO character figures from the reference image.
+
+### Objects/Food
+- Geometry: Convert items to comic-style geometric shapes with "partial shrink, partial enlarge" treatment.
+- Colors: Apply high-saturation color matching from the reference style.
+- Background: White background outside the edges.
+- Prohibition: Absolutely NO character figures from the reference image.
+
+

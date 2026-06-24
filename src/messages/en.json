@@ -44,7 +44,7 @@
   },
   "work": {
     "title": "Work",
-    "description": "Browse projects by visual direction. Case study pages will be expanded in the next iteration.",
+    "description": "Browse projects by visual direction, from brand systems and spatial graphics to motion work, with context, role, and production notes.",
     "filters": {
       "all": "All",
       "display": "Display",
@@ -53,7 +53,13 @@
       "motion": "Motion",
       "personal": "Personal"
     },
-    "comingSoon": "Case study page coming soon"
+    "comingSoon": "Case study page coming soon",
+    "viewCase": "View case",
+    "back": "Back to work",
+    "overview": "Overview",
+    "role": "Role",
+    "services": "Services",
+    "outcome": "Outcome"
   },
   "about": {
     "title": "About",

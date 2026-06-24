@@ -13,8 +13,64 @@
       "zh": "国产大型邮轮公共空间平面艺术品，美术指导与落地制作。",
       "en": "Graphic art for public spaces on China's first large cruise ship."
     },
+    "role": {
+      "zh": "美术指导 / 平面艺术品设计 / 落地制作协同",
+      "en": "Art direction / Graphic artwork / Production coordination"
+    },
+    "timeframe": "2024",
+    "services": {
+      "zh": ["公共空间视觉", "图形创作", "制作跟进", "团队协作"],
+      "en": ["Spatial graphics", "Artwork system", "Production follow-up", "Team collaboration"]
+    },
+    "detail": {
+      "intro": {
+        "zh": "为大型邮轮公共空间建立可远观、可近看的视觉叙事，让图形在空间尺度、材质和人流动线中保持清晰识别。",
+        "en": "A visual narrative for public cruise interiors, designed to stay legible across spatial scale, material constraints, and passenger movement."
+      },
+      "sections": [
+        {
+          "title": { "zh": "空间中的图形节奏", "en": "Graphic rhythm in space" },
+          "body": {
+            "zh": "项目重点不是单张海报，而是一组在公共区域连续出现的视觉节点。画面需要和墙面、灯光、动线、观看距离同时工作。",
+            "en": "The work was less about a single poster and more about a sequence of visual moments across public areas, tuned for walls, lighting, circulation, and viewing distance."
+          }
+        },
+        {
+          "title": { "zh": "从概念到制作", "en": "From concept to production" },
+          "body": {
+            "zh": "在创意阶段确定图形语言和氛围，随后根据材料、尺寸和安装条件调整细节，保证最终效果不被制作环节稀释。",
+            "en": "The visual language was shaped early, then refined around material, scale, and installation limits so the final pieces kept their intended character."
+          }
+        }
+      ],
+      "outcome": {
+        "zh": "形成一套适配邮轮公共空间的艺术品视觉系统，兼顾叙事、识别和落地稳定性。",
+        "en": "The result is an artwork system for cruise public spaces that balances narrative, recognition, and production reliability."
+      }
+    },
     "tags": ["art-direction", "team", "production", "illustration"],
-    "cover": "/images/projects/adora-field.png"
+    "cover": "/images/projects/adora-magic-city/1.png",
+    "images": [
+      "/images/projects/adora-magic-city/1.png",
+      "/images/projects/adora-magic-city/2.png",
+      "/images/projects/adora-magic-city/3.png",
+      "/images/projects/adora-magic-city/4.png",
+      "/images/projects/adora-magic-city/5.png",
+      "/images/projects/adora-magic-city/6.png",
+      "/images/projects/adora-magic-city/7.png",
+      "/images/projects/adora-magic-city/8.png",
+      "/images/projects/adora-magic-city/9.png",
+      "/images/projects/adora-magic-city/10.png",
+      "/images/projects/adora-magic-city/11.png",
+      "/images/projects/adora-magic-city/12.png",
+      "/images/projects/adora-magic-city/13.png",
+      "/images/projects/adora-magic-city/14.png",
+      "/images/projects/adora-magic-city/15.png",
+      "/images/projects/adora-magic-city/16.png",
+      "/images/projects/adora-magic-city/17.png",
+      "/images/projects/adora-magic-city/18.png",
+      "/images/projects/adora-magic-city/19.png"
+    ]
   },
   {
     "slug": "fabrie",
@@ -30,8 +86,144 @@
       "zh": "设计师协作平台的品牌 DNA、延展与产品/运营视觉。",
       "en": "Brand system, extensions, and product/ops visuals for a design collaboration tool."
     },
+    "role": {
+      "zh": "品牌视觉 / 运营延展 / 产品视觉支持",
+      "en": "Brand visuals / Campaign extensions / Product visual support"
+    },
+    "timeframe": "2023",
+    "services": {
+      "zh": ["品牌 DNA", "视觉系统", "运营物料", "动效方向"],
+      "en": ["Brand DNA", "Visual system", "Marketing assets", "Motion direction"]
+    },
+    "detail": {
+      "intro": {
+        "zh": "围绕设计协作工具的产品气质，建立更清晰、更可延展的品牌视觉语言，让品牌能进入产品、社媒和活动场景。",
+        "en": "A clearer and more expandable brand language for a design collaboration product, built to move across product, social, and campaign contexts."
+      },
+      "sections": [
+        {
+          "title": { "zh": "把协作变成视觉结构", "en": "Turning collaboration into structure" },
+          "body": {
+            "zh": "视觉系统围绕模块、连接、画布和团队协作展开，避免只停留在装饰图形，而是让品牌概念能被反复组合。",
+            "en": "The system builds on modules, links, canvases, and teamwork, making the brand concept recombinable instead of merely decorative."
+          }
+        },
+        {
+          "title": { "zh": "适配高频传播", "en": "Built for frequent publishing" },
+          "body": {
+            "zh": "延展资产需要快速服务产品更新、社交传播和活动物料，因此重点放在明确的规则、稳定的版式和可复用组件。",
+            "en": "Because the assets had to support product updates, social posts, and events, the work emphasized clear rules, stable layouts, and reusable components."
+          }
+        }
+      ],
+      "outcome": {
+        "zh": "品牌从单一视觉风格扩展成可执行的素材系统，支持更高频、更一致的产品传播。",
+        "en": "The brand moved from a visual style into an executable asset system for faster and more consistent product communication."
+      }
+    },
     "tags": ["brand", "uiux", "motion", "typography"],
-    "cover": "/images/projects/fabrie-field.png"
+    "cover": "/images/projects/fabrie/1.png",
+    "images": [
+      "/images/projects/fabrie/1.png",
+      "/images/projects/fabrie/2.png",
+      "/images/projects/fabrie/3.png",
+      "/images/projects/fabrie/4.png",
+      "/images/projects/fabrie/5.png",
+      "/images/projects/fabrie/6.png",
+      "/images/projects/fabrie/7.png",
+      "/images/projects/fabrie/8.png",
+      "/images/projects/fabrie/9.png",
+      "/images/projects/fabrie/10.png",
+      "/images/projects/fabrie/11.png",
+      "/images/projects/fabrie/12.png",
+      "/images/projects/fabrie/13.png",
+      "/images/projects/fabrie/14.png",
+      "/images/projects/fabrie/15.png"
+    ]
+  },
+  {
+    "slug": "dokie",
+    "category": "brand",
+    "featured": false,
+    "year": 2025,
+    "client": "Dokie",
+    "title": {
+      "zh": "Dokie 品牌视觉设计",
+      "en": "Dokie Brand Identity"
+    },
+    "summary": {
+      "zh": "围绕 AI 图像产品建立的品牌识别、Logo、渐变色彩与辅助符号系统。",
+      "en": "A brand identity system for an AI imaging product, spanning logo, gradient palette, and supporting symbols."
+    },
+    "role": {
+      "zh": "品牌识别 / Logo 系统 / 视觉语言 / 插画规范",
+      "en": "Brand identity / Logo system / Visual language / Illustration direction"
+    },
+    "timeframe": "2025",
+    "services": {
+      "zh": ["品牌识别", "Logo 系统", "色彩系统", "辅助图形", "插画规范"],
+      "en": ["Brand identity", "Logo system", "Color system", "Graphic symbols", "Illustration direction"]
+    },
+    "detail": {
+      "intro": {
+        "zh": "Dokie 的品牌系统围绕“专业但不冷、轻松但不失控”的产品气质展开，用手势化的 Logo、天空般的渐变色和一套轻量符号语言，建立更亲近也更稳定的视觉识别。",
+        "en": "Dokie's identity is built around a product tone that feels professional without stiffness and playful without losing control, using a gesture-led logo, sky-like gradients, and a lightweight symbol language."
+      },
+      "sections": [
+        {
+          "title": { "zh": "从手势出发的 Logo 概念", "en": "A logo concept rooted in gesture" },
+          "body": {
+            "zh": "Logo 以手势中的“OK”动作为起点，把直觉反馈、认可和可控感压缩进一个简洁的品牌记号。整体视觉刻意在专业与 playful 之间保持 80/20 的比例，让品牌既能服务产品场景，也保留一点口语化的轻松感。",
+            "en": "The mark starts from an 'OK' hand gesture, compressing intuition, approval, and control into a single sign. The broader system keeps an 80/20 balance between professional clarity and playful ease so it works inside product contexts without feeling dry."
+          }
+        },
+        {
+          "title": { "zh": "更柔和的识别方式", "en": "A softer recognition system" },
+          "body": {
+            "zh": "字标、图标和高亮光影一起构成 Dokie 的核心识别，避免纯技术产品常见的生硬感。发光边缘和留白让品牌在界面里更像一种情绪氛围，而不是过度强调功能的指令符号。",
+            "en": "The wordmark, symbol, and soft luminous treatment work together to avoid the rigid tone common in technical products. Glow, blur, and negative space make the identity feel atmospheric instead of overly instructional."
+          }
+        },
+        {
+          "title": { "zh": "从天空提取的渐变色板", "en": "A gradient palette drawn from the sky" },
+          "body": {
+            "zh": "色彩系统从 midnight、daylight 到 twilight 的天空变化中取样，提炼出 Dokie Blue、Sky Blue、Cream Yellow 与 Coral Red 等核心颜色。它既给品牌提供更高识别度，也为产品中的图像生成和状态反馈留出足够柔和的过渡空间。",
+            "en": "The palette samples the sky across midnight, daylight, and twilight, resulting in Dokie Blue, Sky Blue, Cream Yellow, and Coral Red. That gives the brand a recognizable signature while keeping transitions soft enough for image-generation and product-state moments."
+          }
+        },
+        {
+          "title": { "zh": "辅助符号与插画语言", "en": "Supporting symbols and illustration language" },
+          "body": {
+            "zh": "辅助图形延续人类直觉表达中的手、眼、火花、云朵与植物等轻量意象，全部以统一粗细的单线勾勒完成。插画则采用几何色块加手绘线条的方式，只表达一个动作、一个关系或一个状态，保证品牌延展始终轻巧、可控且不抢内容本身。",
+            "en": "Supporting symbols extend from intuitive human cues like hands, eyes, sparks, clouds, and plants, all drawn with a consistent monoline weight. Illustrations pair geometric color blocks with hand-drawn strokes and focus on a single action, relationship, or state so extensions stay light, controlled, and content-friendly."
+          }
+        }
+      ],
+      "outcome": {
+        "zh": "最终形成一套适合 Dokie 产品与品牌传播并行使用的视觉系统，覆盖 Logo、字标、色板、辅助符号与插画规范，让品牌既有识别度，也有温度。",
+        "en": "The final result is a visual system that supports both product use and brand communication across logo, wordmark, color, symbols, and illustration guidance, giving Dokie both recognition and warmth."
+      }
+    },
+    "tags": ["brand", "identity", "logo", "visual-system", "illustration"],
+    "cover": "/images/projects/dokie/Cover.png",
+    "images": [
+      "/images/projects/dokie/Cover.png",
+      "/images/projects/dokie/01.png",
+      "/images/projects/dokie/01-1.png",
+      "/images/projects/dokie/01-2.png",
+      "/images/projects/dokie/01-3.png",
+      "/images/projects/dokie/01-4.png",
+      "/images/projects/dokie/01-5.png",
+      "/images/projects/dokie/02.png",
+      "/images/projects/dokie/02-1.png",
+      "/images/projects/dokie/02-2.png",
+      "/images/projects/dokie/03-1.png",
+      "/images/projects/dokie/03-2.png",
+      "/images/projects/dokie/03-3.png",
+      "/images/projects/dokie/04.png",
+      "/images/projects/dokie/04-1.png",
+      "/images/projects/dokie/04-2.png"
+    ]
   },
   {
     "slug": "leefon",
@@ -40,15 +232,182 @@
     "year": 2023,
     "client": "Leefon",
     "title": {
-      "zh": "黎感品牌视觉设计",
+      "zh": "黎感\n品牌视觉设计",
       "en": "Leefon Brand Identity"
     },
     "summary": {
       "zh": "科学护肤品牌的 0-1 视觉体系与电商/社交资产。",
       "en": "0-to-1 visual system and commerce/social assets for a skincare brand."
     },
+    "role": {
+      "zh": "品牌识别 / 包装方向 / 电商与社媒视觉",
+      "en": "Identity / Packaging direction / Commerce and social visuals"
+    },
+    "timeframe": "2023",
+    "services": {
+      "zh": ["品牌识别", "包装视觉", "电商页面", "社交内容"],
+      "en": ["Identity", "Packaging visuals", "Commerce pages", "Social content"]
+    },
+    "detail": {
+      "intro": {
+        "zh": "为科学护肤品牌建立从识别到销售场景的视觉体系，在理性功效和柔和感受之间找到稳定的表达。",
+        "en": "A visual system for a science-led skincare brand, balancing rational efficacy with a softer sensory tone across identity and sales touchpoints."
+      },
+      "sections": [
+        {
+          "title": { "zh": "理性与感受之间", "en": "Between reason and feeling" },
+          "body": {
+            "zh": "护肤品牌需要传达成分、功效和信任感，也需要保留亲近的情绪温度。视觉语言因此结合了干净版式、柔和色块和清晰信息层级。",
+            "en": "The brand needed to communicate ingredients, efficacy, and trust while keeping an approachable tone, so the system combines clean layouts, soft color fields, and clear hierarchy."
+          }
+        },
+        {
+          "title": { "zh": "面向转化的延展", "en": "Extensions for conversion" },
+          "body": {
+            "zh": "电商与社媒资产围绕产品卖点、套装组合和使用场景展开，让品牌识别不只好看，也能承担解释和转化任务。",
+            "en": "Commerce and social assets were organized around benefits, bundles, and use cases, so the identity could explain, persuade, and sell."
+          }
+        }
+      ],
+      "outcome": {
+        "zh": "完成从基础识别到销售物料的 0-1 视觉搭建，支撑品牌上线与持续内容生产。",
+        "en": "A 0-to-1 visual foundation spanning identity and sales assets, ready for launch and ongoing content production."
+      }
+    },
     "tags": ["brand", "packaging", "illustration", "ecommerce"],
-    "cover": "/images/projects/leefon-field.png"
+    "cover": "/images/projects/leefon/35.png",
+    "images": [
+      "/images/projects/leefon/35.png",
+      "/images/projects/leefon/36.png",
+      "/images/projects/leefon/37.png",
+      "/images/projects/leefon/38.png",
+      "/images/projects/leefon/39.png",
+      "/images/projects/leefon/40.png",
+      "/images/projects/leefon/41.png",
+      "/images/projects/leefon/42.png",
+      "/images/projects/leefon/43.png",
+      "/images/projects/leefon/44.png",
+      "/images/projects/leefon/45.png",
+      "/images/projects/leefon/46.png",
+      "/images/projects/leefon/47.png",
+      "/images/projects/leefon/48.png",
+      "/images/projects/leefon/49.png"
+    ]
+  },
+  {
+    "slug": "nla",
+    "category": "brand",
+    "featured": false,
+    "year": 2023,
+    "client": "NLA",
+    "title": {
+      "zh": "NLA 品牌视觉设计",
+      "en": "NLA Brand Identity"
+    },
+    "summary": {
+      "zh": "品牌视觉系统与传播延展设计。",
+      "en": "Brand identity system and communication extensions."
+    },
+    "role": {
+      "zh": "品牌视觉 / 视觉系统 / 传播延展",
+      "en": "Brand visuals / Visual system / Communication extensions"
+    },
+    "timeframe": "2023",
+    "services": {
+      "zh": ["品牌识别", "视觉系统", "传播物料", "版式延展"],
+      "en": ["Identity", "Visual system", "Communication assets", "Layout extensions"]
+    },
+    "detail": {
+      "intro": {
+        "zh": "围绕品牌气质建立可延展的视觉表达，让识别、版式和传播场景形成统一的视觉系统。",
+        "en": "An expandable visual language built around the brand attitude, connecting identity, layout, and communication contexts into one system."
+      },
+      "sections": [
+        {
+          "title": { "zh": "识别与延展", "en": "Identity and extension" },
+          "body": {
+            "zh": "项目从核心识别出发，延展到不同触点中的图形、版式和信息层级，保持品牌表达的一致性。",
+            "en": "The work starts from core identity and extends into graphics, layouts, and information hierarchy across different touchpoints."
+          }
+        },
+        {
+          "title": { "zh": "面向传播场景", "en": "For communication contexts" },
+          "body": {
+            "zh": "视觉资产需要适配不同尺寸和媒介，因此重点放在清晰的规则、稳定的构图和可复用的版式结构。",
+            "en": "The assets are built for varied sizes and media, emphasizing clear rules, stable composition, and reusable layout structures."
+          }
+        }
+      ],
+      "outcome": {
+        "zh": "形成一组可用于品牌展示与传播落地的视觉资产。",
+        "en": "A set of visual assets ready for brand presentation and communication rollout."
+      }
+    },
+    "tags": ["brand", "identity", "layout", "visual-system"],
+    "cover": "/images/projects/nla/50.png",
+    "images": [
+      "/images/projects/nla/50.png",
+      "/images/projects/nla/51.png",
+      "/images/projects/nla/52.png",
+      "/images/projects/nla/53.png"
+    ]
+  },
+  {
+    "slug": "dormie",
+    "category": "brand",
+    "featured": false,
+    "year": 2023,
+    "client": "Dormie",
+    "title": {
+      "zh": "Dormie 品牌视觉设计",
+      "en": "Dormie Brand Identity"
+    },
+    "summary": {
+      "zh": "品牌视觉系统与传播延展设计。",
+      "en": "Brand identity system and communication extensions."
+    },
+    "role": {
+      "zh": "品牌视觉 / 视觉系统 / 传播延展",
+      "en": "Brand visuals / Visual system / Communication extensions"
+    },
+    "timeframe": "2023",
+    "services": {
+      "zh": ["品牌识别", "视觉系统", "传播物料", "版式延展"],
+      "en": ["Identity", "Visual system", "Communication assets", "Layout extensions"]
+    },
+    "detail": {
+      "intro": {
+        "zh": "围绕品牌气质建立可延展的视觉表达，让识别、版式和传播场景形成统一的视觉系统。",
+        "en": "An expandable visual language built around the brand attitude, connecting identity, layout, and communication contexts into one system."
+      },
+      "sections": [
+        {
+          "title": { "zh": "品牌识别与视觉资产", "en": "Identity and visual assets" },
+          "body": {
+            "zh": "项目从核心识别出发，延展到不同触点中的图形、版式和信息层级，保持品牌表达的一致性。",
+            "en": "The work starts from core identity and extends into graphics, layouts, and information hierarchy across different touchpoints."
+          }
+        },
+        {
+          "title": { "zh": "适配多种触点", "en": "Across multiple touchpoints" },
+          "body": {
+            "zh": "视觉资产需要适配不同尺寸和媒介，因此重点放在清晰的规则、稳定的构图和可复用的版式结构。",
+            "en": "The assets are built for varied sizes and media, emphasizing clear rules, stable composition, and reusable layout structures."
+          }
+        }
+      ],
+      "outcome": {
+        "zh": "形成一组可用于品牌展示与传播落地的视觉资产。",
+        "en": "A set of visual assets ready for brand presentation and communication rollout."
+      }
+    },
+    "tags": ["brand", "identity", "layout", "visual-system"],
+    "cover": "/images/projects/dormie/54.png",
+    "images": [
+      "/images/projects/dormie/54.png",
+      "/images/projects/dormie/55.png",
+      "/images/projects/dormie/56.png"
+    ]
   },
   {
     "slug": "eleme-motion",
@@ -64,7 +423,510 @@
       "zh": "广告动态图形与团队协作项目。",
       "en": "Advertising motion graphics — team collaboration."
     },
+    "role": {
+      "zh": "动态图形设计 / 分镜与视觉协作",
+      "en": "Motion graphics / Storyboard and visual collaboration"
+    },
+    "timeframe": "2022",
+    "services": {
+      "zh": ["动态图形", "广告视觉", "分镜协作", "团队制作"],
+      "en": ["Motion graphics", "Campaign visuals", "Storyboard support", "Team production"]
+    },
+    "detail": {
+      "intro": {
+        "zh": "围绕广告传播节奏设计动态图形，把品牌元素、促销信息和画面动势整合到短时间的观看体验中。",
+        "en": "Motion graphics for an advertising rhythm, combining brand elements, promotion messages, and kinetic pacing into a short viewing experience."
+      },
+      "sections": [
+        {
+          "title": { "zh": "信息与动势", "en": "Message and movement" },
+          "body": {
+            "zh": "广告动效需要在很短时间内建立识别和记忆点，因此画面切换、文字节奏和重点信息的出现顺序都被统一考虑。",
+            "en": "Because campaign motion has very little time to land, transitions, type rhythm, and message order were considered as one sequence."
+          }
+        },
+        {
+          "title": { "zh": "团队协作流程", "en": "Collaborative workflow" },
+          "body": {
+            "zh": "项目在团队流程中完成，视觉设计需要和脚本、分镜、动画执行保持同步，保证最终产出节奏统一。",
+            "en": "The work happened inside a team workflow, requiring visual design to stay aligned with scripts, storyboards, and animation execution."
+          }
+        }
+      ],
+      "outcome": {
+        "zh": "输出适配广告传播的动态图形视觉，服务品牌曝光与短视频节奏。",
+        "en": "Motion graphics tailored for campaign communication, brand exposure, and short-form pacing."
+      }
+    },
     "tags": ["motion", "team"],
-    "cover": "/images/projects/eleme-field.png"
+    "cover": "/images/projects/eleme-motion/guess-win-trilogy.jpg",
+    "images": [
+      "/images/projects/eleme-motion/57.png"
+    ],
+    "videos": [
+      {
+        "src": "/videos/projects/eleme-motion/guess-win-trilogy.mp4",
+        "poster": "/images/projects/eleme-motion/guess-win-trilogy.jpg",
+        "title": {
+          "zh": "饿了么 上猜赢三步曲",
+          "en": "Ele.me Guess and Win Trilogy"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "royal-casino",
+    "category": "personal",
+    "featured": false,
+    "year": 2025,
+    "client": "PPPP",
+    "title": {
+      "zh": "皇家赌场",
+      "en": "Royal Casino"
+    },
+    "summary": {
+      "zh": "扑克视觉系统与德州扑克指南视觉实验。",
+      "en": "A poker visual system and Texas Hold'em guide experiment."
+    },
+    "role": {
+      "zh": "视觉设计 / 图形系统 / 插画延展",
+      "en": "Visual design / Graphic system / Illustration extension"
+    },
+    "timeframe": "2025",
+    "services": {
+      "zh": ["图形设计", "视觉系统", "插画", "版式设计"],
+      "en": ["Graphic design", "Visual system", "Illustration", "Layout design"]
+    },
+    "detail": {
+      "intro": {
+        "zh": "以扑克牌型、中文俗语和德州扑克规则为核心，将游戏逻辑转译成高密度的视觉指南。",
+        "en": "A dense visual guide that translates poker hands, Chinese idioms, and Texas Hold'em rules into a graphic system."
+      },
+      "sections": [
+        {
+          "title": { "zh": "牌型与语言", "en": "Hands and language" },
+          "body": {
+            "zh": "项目把牌型等级、中文表达和图像层级组合在同一画面中，让规则说明变成可观看的视觉场。",
+            "en": "The project combines hand rankings, Chinese expressions, and visual hierarchy into a single field of information."
+          }
+        },
+        {
+          "title": { "zh": "高密度信息排布", "en": "Dense information layout" },
+          "body": {
+            "zh": "画面通过扑克牌、霓虹字、标签和包装延展建立节奏，在复杂信息中保持强烈识别。",
+            "en": "Cards, neon typography, labels, and packaging extensions create rhythm while keeping the dense information recognizable."
+          }
+        }
+      ],
+      "outcome": {
+        "zh": "形成一组围绕德州扑克指南展开的视觉主图与应用延展。",
+        "en": "A main visual and application extension built around a Texas Hold'em guide."
+      }
+    },
+    "tags": ["personal", "graphic", "illustration", "layout"],
+    "cover": "/images/projects/royal-casino/1.png",
+    "images": [
+      "/images/projects/royal-casino/1.png",
+      "/images/projects/royal-casino/2.png"
+    ]
+  },
+  {
+    "slug": "glimpse",
+    "category": "personal",
+    "featured": false,
+    "year": 2025,
+    "client": "PPPP",
+    "title": {
+      "zh": "Glimpse",
+      "en": "Glimpse"
+    },
+    "summary": {
+      "zh": "围绕 The Origin 展开的饮料品牌视觉与包装实验。",
+      "en": "A beverage brand visual and packaging experiment around The Origin."
+    },
+    "role": {
+      "zh": "视觉设计 / 包装延展 / 插画",
+      "en": "Visual design / Packaging extension / Illustration"
+    },
+    "timeframe": "2025",
+    "services": {
+      "zh": ["图形设计", "包装视觉", "插画", "品牌延展"],
+      "en": ["Graphic design", "Packaging visuals", "Illustration", "Brand extension"]
+    },
+    "detail": {
+      "intro": {
+        "zh": "以粉色人物、植物和透明空间为核心视觉，建立一组带有未来感和感官气质的饮料品牌图像。",
+        "en": "A beverage brand image built around a pink figure, plants, and translucent space, with a futuristic sensory tone."
+      },
+      "sections": [
+        {
+          "title": { "zh": "人物与空间", "en": "Figure and space" },
+          "body": {
+            "zh": "主视觉通过半透明人物、霓虹色彩和空间切片制造朦胧的观看感，形成 Glimpse 的识别核心。",
+            "en": "The key visual uses a translucent figure, neon color, and spatial slices to create a blurred sense of looking."
+          }
+        },
+        {
+          "title": { "zh": "品牌应用延展", "en": "Brand applications" },
+          "body": {
+            "zh": "视觉系统延展到罐身、海报、图标和场景图中，让单张主视觉进入完整品牌应用。",
+            "en": "The visual system extends across cans, posters, icons, and scene imagery, turning one key visual into a fuller brand application."
+          }
+        }
+      ],
+      "outcome": {
+        "zh": "形成一组围绕 Glimpse 与 The Origin 的主视觉和包装延展。",
+        "en": "A key visual and packaging extension for Glimpse and The Origin."
+      }
+    },
+    "tags": ["personal", "packaging", "illustration", "visual-system"],
+    "cover": "/images/projects/glimpse/1.png",
+    "images": [
+      "/images/projects/glimpse/1.png",
+      "/images/projects/glimpse/2.png"
+    ]
+  },
+  {
+    "slug": "the-space",
+    "category": "personal",
+    "featured": false,
+    "year": 2025,
+    "client": "PPPP",
+    "title": {
+      "zh": "The Space",
+      "en": "The Space"
+    },
+    "summary": {
+      "zh": "Glimpse 2 系列的太空主题视觉与应用延展。",
+      "en": "A space-themed visual and application extension for the Glimpse 2 series."
+    },
+    "role": {
+      "zh": "视觉设计 / 插画 / 应用延展",
+      "en": "Visual design / Illustration / Application extension"
+    },
+    "timeframe": "2025",
+    "services": {
+      "zh": ["图形设计", "插画", "海报视觉", "应用延展"],
+      "en": ["Graphic design", "Illustration", "Poster visual", "Application extension"]
+    },
+    "detail": {
+      "intro": {
+        "zh": "以绿色发光人物和深色宇宙场景为核心，构建 Glimpse 2 的太空漫游视觉。",
+        "en": "A space odyssey visual for Glimpse 2, built around a glowing green figure and a dark cosmic field."
+      },
+      "sections": [
+        {
+          "title": { "zh": "宇宙场景与发光人物", "en": "Cosmic field and glowing figure" },
+          "body": {
+            "zh": "主视觉用星云、轨道、光晕和人物形体组织画面，让 The Space 形成清晰的主题识别。",
+            "en": "Nebulae, orbit lines, glows, and the figure compose the key visual and define the identity of The Space."
+          }
+        },
+        {
+          "title": { "zh": "海报与应用场景", "en": "Poster and applications" },
+          "body": {
+            "zh": "视觉延展到标题画面、海报印刷和场景应用中，保持深色背景与荧光色彩的统一气质。",
+            "en": "The visual extends into title frames, poster printing, and contextual applications while keeping the dark-field and fluorescent palette consistent."
+          }
+        }
+      ],
+      "outcome": {
+        "zh": "形成一组围绕 Glimpse 2 与 The Space 的主视觉和展示延展。",
+        "en": "A key visual and display extension for Glimpse 2 and The Space."
+      }
+    },
+    "tags": ["personal", "poster", "illustration", "visual-system"],
+    "cover": "/images/projects/the-space/1.png",
+    "images": [
+      "/images/projects/the-space/1.png",
+      "/images/projects/the-space/2.png"
+    ]
+  },
+  {
+    "slug": "long-road",
+    "category": "personal",
+    "featured": false,
+    "year": 2025,
+    "client": "PPPP",
+    "title": {
+      "zh": "道阻且长",
+      "en": "Long Road"
+    },
+    "summary": {
+      "zh": "中文立体字、路径光线与红黑空间的视觉实验。",
+      "en": "A visual experiment with dimensional Chinese typography, light paths, and red-black space."
+    },
+    "role": {
+      "zh": "视觉设计 / 字体图形 / 空间插画",
+      "en": "Visual design / Typographic graphics / Spatial illustration"
+    },
+    "timeframe": "2025",
+    "services": {
+      "zh": ["图形设计", "字体设计", "海报视觉", "应用延展"],
+      "en": ["Graphic design", "Typography", "Poster visual", "Application extension"]
+    },
+    "detail": {
+      "intro": {
+        "zh": "以“道阻且长”为核心文字，将红黑立体字、几何空间和发光路径组合成具有叙事感的视觉画面。",
+        "en": "A narrative visual built around dimensional Chinese type, geometric space, and glowing paths."
+      },
+      "sections": [
+        {
+          "title": { "zh": "文字作为空间", "en": "Type as space" },
+          "body": {
+            "zh": "项目把中文文字转化为具有体积和路径关系的空间结构，让字形成为画面的主体建筑。",
+            "en": "The project turns Chinese characters into volumetric spatial structures, making the type the main architecture of the image."
+          }
+        },
+        {
+          "title": { "zh": "红黑系统延展", "en": "Red-black system extension" },
+          "body": {
+            "zh": "主视觉延展到标题字、辅助图形和应用画面中，保持红黑对比与光线轨迹的强识别。",
+            "en": "The key visual extends into title type, supporting graphics, and application scenes while keeping the red-black contrast and light trails recognizable."
+          }
+        }
+      ],
+      "outcome": {
+        "zh": "形成一组围绕“道阻且长”的主视觉和文字图形应用。",
+        "en": "A key visual and typographic application set built around Long Road."
+      }
+    },
+    "tags": ["personal", "typography", "poster", "visual-system"],
+    "cover": "/images/projects/long-road/1.png",
+    "images": [
+      "/images/projects/long-road/1.png",
+      "/images/projects/long-road/2.png"
+    ]
+  },
+  {
+    "slug": "see-the-world",
+    "category": "personal",
+    "featured": false,
+    "year": 2025,
+    "client": "PPPP",
+    "title": {
+      "zh": "去看看这个世界",
+      "en": "To See The World"
+    },
+    "summary": {
+      "zh": "关于探索、危险与自我发现的视觉实验。",
+      "en": "A visual experiment about exploration, danger, and self-discovery."
+    },
+    "role": {
+      "zh": "视觉设计 / 图形系统 / 插画延展",
+      "en": "Visual design / Graphic system / Illustration extension"
+    },
+    "timeframe": "2025",
+    "services": {
+      "zh": ["图形设计", "插画", "海报视觉", "应用延展"],
+      "en": ["Graphic design", "Illustration", "Poster visual", "Application extension"]
+    },
+    "detail": {
+      "intro": {
+        "zh": "以“去看看这个世界”为核心，把冒险提示、路径符号和发光图形组织成一张关于探索与感知的视觉地图。",
+        "en": "Built around To See The World, this visual map combines adventure cues, path symbols, and glowing graphics around exploration and perception."
+      },
+      "sections": [
+        {
+          "title": { "zh": "探索与提示", "en": "Exploration and signals" },
+          "body": {
+            "zh": "项目把旅行、危险、方向和观看欲望组织在同一张画面里，让“去看看”同时带有好奇和警觉。",
+            "en": "The project brings travel, danger, direction, and the desire to look into one image, making the act of seeing feel both curious and alert."
+          }
+        },
+        {
+          "title": { "zh": "图形应用延展", "en": "Graphic applications" },
+          "body": {
+            "zh": "主视觉延展到人物、标识、应用图和场景画面中，保持高饱和图形与暗色空间的对比。",
+            "en": "The key visual extends into figures, marks, applications, and scene imagery while keeping the contrast between saturated graphics and dark space."
+          }
+        }
+      ],
+      "outcome": {
+        "zh": "形成一组围绕“去看看这个世界”的主视觉和图形应用。",
+        "en": "A key visual and graphic application set built around To See The World."
+      }
+    },
+    "tags": ["personal", "poster", "illustration", "visual-system"],
+    "cover": "/images/projects/see-the-world/1.png",
+    "images": [
+      "/images/projects/see-the-world/1.png",
+      "/images/projects/see-the-world/2.png"
+    ]
+  },
+  {
+    "slug": "eigba",
+    "category": "personal",
+    "featured": false,
+    "year": 2025,
+    "client": "PPPP",
+    "title": {
+      "zh": "E.I.G.B.A",
+      "en": "E.I.G.B.A"
+    },
+    "summary": {
+      "zh": "围绕 Everything Is Gonna Be Alright 展开的贴纸与周边视觉实验。",
+      "en": "A sticker and merchandise visual experiment around Everything Is Gonna Be Alright."
+    },
+    "role": {
+      "zh": "视觉设计 / 贴纸图形 / 周边延展",
+      "en": "Visual design / Sticker graphics / Merchandise extension"
+    },
+    "timeframe": "2025",
+    "services": {
+      "zh": ["图形设计", "贴纸设计", "插画", "落地制作"],
+      "en": ["Graphic design", "Sticker design", "Illustration", "Production extension"]
+    },
+    "detail": {
+      "intro": {
+        "zh": "以“一切都会好起来的”为核心，把中英文标语、贴纸轮廓和包装质感组合成轻快的个人项目视觉。",
+        "en": "Built around Everything Is Gonna Be Alright, this personal visual combines bilingual slogans, sticker silhouettes, and packaging texture."
+      },
+      "sections": [
+        {
+          "title": { "zh": "标语与贴纸系统", "en": "Slogan and sticker system" },
+          "body": {
+            "zh": "项目用多组贴纸形态、标题字和辅助符号建立节奏，让一句话在不同形状与尺度中反复出现。",
+            "en": "Multiple sticker shapes, title treatments, and supporting symbols create rhythm, letting one phrase repeat across different forms and scales."
+          }
+        },
+        {
+          "title": { "zh": "包装与场景延展", "en": "Packaging and context" },
+          "body": {
+            "zh": "视觉被放入透明包装和天空背景中，强化手作周边、随身物件和轻松情绪之间的关系。",
+            "en": "The visuals sit within clear packaging and a sky backdrop, connecting handmade merchandise, portable objects, and a lighter emotional tone."
+          }
+        }
+      ],
+      "outcome": {
+        "zh": "形成一组围绕 E.I.G.B.A 的贴纸图形、包装展示和应用延展。",
+        "en": "A sticker graphic, packaging display, and application set built around E.I.G.B.A."
+      }
+    },
+    "tags": ["personal", "sticker", "graphic", "merchandise"],
+    "cover": "/images/projects/eigba/1.png",
+    "images": [
+      "/images/projects/eigba/1.png"
+    ]
+  },
+  {
+    "slug": "invisible-string",
+    "category": "personal",
+    "featured": false,
+    "year": 2025,
+    "client": "PPPP",
+    "title": {
+      "zh": "Invisible String",
+      "en": "Invisible String"
+    },
+    "summary": {
+      "zh": "以 Invisible String 为主题的柔彩海报与应用展示。",
+      "en": "A soft-color poster and application showcase themed around Invisible String."
+    },
+    "role": {
+      "zh": "视觉设计 / 海报插画 / 应用延展",
+      "en": "Visual design / Poster illustration / Application extension"
+    },
+    "timeframe": "2025",
+    "services": {
+      "zh": ["图形设计", "插画", "海报视觉", "应用展示"],
+      "en": ["Graphic design", "Illustration", "Poster visual", "Application showcase"]
+    },
+    "detail": {
+      "intro": {
+        "zh": "以 Invisible String 为核心，把发光线条、漂浮场景和柔和渐变组织成一张关于连接、回忆与偶然的视觉图像。",
+        "en": "Built around Invisible String, this visual combines glowing lines, floating scenes, and soft gradients into an image about connection, memory, and chance."
+      },
+      "sections": [
+        {
+          "title": { "zh": "隐形线索与漂浮空间", "en": "Invisible clues and floating space" },
+          "body": {
+            "zh": "画面通过弯曲路径、文字轨迹和多层场景建立“看不见的线”，让叙事在明亮色彩中缓慢展开。",
+            "en": "Curved paths, text trails, and layered scenes build the invisible string, letting the narrative unfold through luminous color."
+          }
+        },
+        {
+          "title": { "zh": "海报与展示延展", "en": "Poster and presentation" },
+          "body": {
+            "zh": "视觉延展到海报主图、局部展示和手持场景中，保留柔彩渐变、荧光黄手写字和细线文本的统一气质。",
+            "en": "The visual extends into the main poster, detail views, and a handheld context while preserving soft gradients, fluorescent yellow script, and fine-line text."
+          }
+        }
+      ],
+      "outcome": {
+        "zh": "形成一组围绕 Invisible String 的海报主视觉与应用展示。",
+        "en": "A poster key visual and application showcase built around Invisible String."
+      }
+    },
+    "tags": ["personal", "poster", "illustration", "visual-system"],
+    "cover": "/images/projects/invisible-string/1.png",
+    "images": [
+      "/images/projects/invisible-string/1.png",
+      "/images/projects/invisible-string/2.png"
+    ]
+  },
+  {
+    "slug": "square",
+    "category": "personal",
+    "featured": false,
+    "year": 2025,
+    "client": "PPPP",
+    "title": {
+      "zh": "Square",
+      "en": "Square"
+    },
+    "summary": {
+      "zh": "方形画幅中的发光图形、情绪符号与视觉实验集合。",
+      "en": "A collection of luminous graphics, emotional symbols, and visual experiments in square formats."
+    },
+    "role": {
+      "zh": "视觉设计 / 图形实验 / 插画延展",
+      "en": "Visual design / Graphic experiment / Illustration extension"
+    },
+    "timeframe": "2025",
+    "services": {
+      "zh": ["图形设计", "插画", "动态视觉", "个人实验"],
+      "en": ["Graphic design", "Illustration", "Motion visuals", "Personal experiments"]
+    },
+    "detail": {
+      "intro": {
+        "zh": "Square 收集了一组围绕方形画幅展开的个人视觉实验，把火焰、光线、烟雾、身体、植物和情绪符号转译成发光的图像语言。",
+        "en": "Square gathers personal visual experiments in square formats, translating flame, light, smoke, body, plants, and emotional symbols into a luminous image language."
+      },
+      "sections": [
+        {
+          "title": { "zh": "发光质感与暗色空间", "en": "Glow texture and dark space" },
+          "body": {
+            "zh": "项目通过黑底、噪点、霓虹线条和柔焦边缘建立统一质感，让不同主题在同一套视觉语气中成立。",
+            "en": "Black fields, grain, neon lines, and soft-focus edges create a consistent texture across otherwise varied subjects."
+          }
+        },
+        {
+          "title": { "zh": "方形序列展示", "en": "Square-format sequence" },
+          "body": {
+            "zh": "图像以单张方形作品和组合版面并置呈现，强调社交媒体画幅、个人实验和系列化视觉之间的关系。",
+            "en": "The work is presented as individual square images and compilation layouts, emphasizing the relationship between social formats, personal studies, and serial visuals."
+          }
+        }
+      ],
+      "outcome": {
+        "zh": "形成一组围绕 Square 的方形视觉作品与组合展示。",
+        "en": "A set of square-format visual works and compilation presentations built around Square."
+      }
+    },
+    "tags": ["personal", "graphic", "illustration", "visual-system"],
+    "cover": "/images/projects/square/1.png",
+    "images": [
+      "/images/projects/square/1.png",
+      "/images/projects/square/2.png",
+      "/images/projects/square/3.png",
+      "/images/projects/square/4.png",
+      "/images/projects/square/5.png",
+      "/images/projects/square/6.png",
+      "/images/projects/square/7.png",
+      "/images/projects/square/8.png",
+      "/images/projects/square/9.png",
+      "/images/projects/square/10.png"
+    ]
   }
 ]

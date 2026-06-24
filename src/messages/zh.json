@@ -44,7 +44,7 @@
   },
   "work": {
     "title": "作品",
-    "description": "按视觉方向浏览项目。当前先展示项目入口和风格框架，后续补充完整案例页。",
+    "description": "按视觉方向浏览项目。从品牌系统、空间图形到动态视觉，每个案例都保留项目背景、角色与落地线索。",
     "filters": {
       "all": "全部",
       "display": "陈设",
@@ -53,7 +53,13 @@
       "motion": "动态",
       "personal": "个人"
     },
-    "comingSoon": "案例详情页即将上线"
+    "comingSoon": "案例详情页即将上线",
+    "viewCase": "查看案例",
+    "back": "返回作品",
+    "overview": "项目概览",
+    "role": "负责内容",
+    "services": "服务",
+    "outcome": "结果"
   },
   "about": {
     "title": "关于",

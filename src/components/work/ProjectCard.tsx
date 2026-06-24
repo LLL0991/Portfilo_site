@@ -16,7 +16,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <article className="group flex flex-col gap-4">
       <Link
-        href="/work"
+        href={`/work/${project.slug}`}
         className="relative block aspect-[4/3] overflow-hidden rounded-[2px] bg-foreground/8"
         aria-label={project.title[locale]}
       >
@@ -38,7 +38,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           {project.summary[locale]}
         </p>
         <p className="text-xs uppercase tracking-[0.16em] text-accent">
-          {t("comingSoon")}
+          {t("viewCase")}
         </p>
       </div>
     </article>

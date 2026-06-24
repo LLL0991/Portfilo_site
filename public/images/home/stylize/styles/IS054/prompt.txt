@@ -1,0 +1,103 @@
+Use the **left image** only as a style reference 
+— borrow only its **tyle, material/texture feel, and color-palette logic**—and
+ **stylize the subject from the right image** accordingly. 
+ **Do not** copy or reuse any specific characters, animals, poses, or structural elements from the reference image.
+1. Subject Reconstruction Rules
+
+🧠 Subject Identification & Structural Restoration
+• Strictly follow the original subject’s structure, proportions, and spatial relationships.
+• Do not add, replace, or invent any elements that do not exist in the original image.
+
+Rigorously preserve the original subject’s structure, proportions, and spatial layout.
+
+No additions, replacements, or fabricated elements not present in the source.
+
+All existing characters, animals, and objects in the source must be fully presented.
+
+Exception / Priority: Normalize lens distortion for head-to-body ratio only. Keep pose and all elements, but scale the head to a standard adult ratio per Section 3. This rule overrides the raw photo’s head size caused by perspective.
+
+2. Prohibited Content
+
+🚫 Adding new characters, animals, backgrounds, actions, or poses
+
+🚫 Reusing any specific character/animal/pose from the reference image
+
+🚫 Adding or implying famous character traits (e.g., crown, mermaid tail, princess dress, etc.)
+
+🚫 Chibi/SD proportions, infantilization, or anthropomorphism
+
+🚫 Color, filters, gradients, glow, or other visual effects
+
+🚫 Cross-hatching, engraved lines, or any directional hatching for shading
+
+🚫 Adding human silhouettes, heads, hands, expressions, or actions to object/animal images
+
+3. Style Definition
+
+Black-and-white cartoon × vintage Western animation model sheet
+
+Human figure proportion: 6–7 heads tall (normal realistic ratio, no chibi, no oversized head, natural realistic body proportion).
+
+Head width = 0.48–0.52 × shoulder width (biacromial)
+
+Head height ≈ 0.9 × head width
+
+Negative: no chibi/SD, no oversized head, no toddler/infantilized proportion, no macrocephaly, no “big face due to close camera”
+
+Lines: natural variation of contour line weight (thicker at joints, finer on soft areas); fine lines for hair and garment folds
+
+Shading: halftone dots only; no directional hatching or engraved shading
+
+4. Rendering Guidelines by Subject Type
+
+Humans
+
+Facial features compact and refined—do not oversimplify
+
+Large-eye structure with double outline + highlight
+
+Nose indicated by 1–2 short lines/curves; no dot noses, round noses, or closed nostrils
+
+Mouth naturally closed or slightly open (no exaggerated wide mouths)
+
+Hair with clear structure, flow, and directionality
+
+Garments rendered with complete structure and natural folds
+
+Optional horizontal gray blush under the nose or on both cheeks
+
+Animals
+
+Match the human style: same line rhythm/weight variation and halftone shading
+
+Preserve anatomy and proportions strictly; no deformation, photorealism, or anthropomorphism
+
+Fur/texture expressed with black-and-white lines or halftone—no realistic fur rendering
+
+Objects
+
+Clear silhouettes with simplified yet accurate structure
+
+Keep necessary internal construction lines without realism
+
+Light and shade via halftone only
+
+Scenery
+
+Clear foreground/midground/background layering
+
+Grayscale expressed with halftone only; background filled with a solid color
+
+No added characters, animals, or decorative icons
+
+5. Composition & Output Settings
+
+Format: PNG
+
+Background: transparent (solid color only for scenery pieces)
+
+Dimensions: match the original image
+
+Framing: center the subject; keep margins ≥ 0.5 × head height on all sides
+
+Cropping: never crop heads, hands/feet, or object edges
