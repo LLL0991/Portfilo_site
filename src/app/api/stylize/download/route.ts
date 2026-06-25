@@ -8,6 +8,7 @@ export async function GET(request: Request) {
   const url = new URL(request.url);
   const imageUrl = url.searchParams.get("url");
   const fileName = sanitizeFileName(url.searchParams.get("filename") ?? "stylized-image.png");
+  const inline = url.searchParams.get("inline") === "true";
 
   if (!imageUrl || !/^https?:\/\//.test(imageUrl)) {
     return Response.json({ error: "Invalid image url" }, { status: 400 });
@@ -24,7 +25,7 @@ export async function GET(request: Request) {
   return new Response(response.body, {
     headers: {
       "Cache-Control": "no-store",
-      "Content-Disposition": `attachment; filename="${fileName}"`,
+      "Content-Disposition": `${inline ? "inline" : "attachment"}; filename="${fileName}"`,
       "Content-Type": contentType,
     },
   });

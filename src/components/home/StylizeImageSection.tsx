@@ -554,14 +554,16 @@ export function StylizeImageSection({
   };
 
   const styleTitle = `${String(activeStyle + 1).padStart(2, "0")} ${active.label}`;
-  const downloadHref =
-    resultUrl && /^https?:\/\//.test(resultUrl)
-      ? `/api/stylize/download?url=${encodeURIComponent(resultUrl)}&filename=${encodeURIComponent(
-          `${fileName}-${active?.id ?? "style"}.png`,
-        )}`
+  const resultFileName = `${fileName}-${active?.id ?? "style"}.png`;
+  const resultIsRemote = Boolean(resultUrl && /^https?:\/\//.test(resultUrl));
+  const resultProxyUrl =
+    resultUrl && resultIsRemote
+      ? `/api/stylize/download?url=${encodeURIComponent(resultUrl)}&filename=${encodeURIComponent(resultFileName)}`
       : resultUrl;
+  const downloadHref = resultProxyUrl;
+  const resultDisplayUrl = resultProxyUrl && resultIsRemote ? `${resultProxyUrl}&inline=true` : resultProxyUrl;
   const cameraScreenUrl = sourceUrl;
-  const printPaperUrl = resultUrl;
+  const printPaperUrl = resultDisplayUrl;
   const displayedProgress = status === "stylizing" ? progressValue : status === "done" || awaitingCameraReset ? 100 : 0;
   const progressLabel = `${PROGRESS_LABELS[progressTick % PROGRESS_LABELS.length]}${".".repeat((progressTick % 3) + 1)}`;
   const statusLabel =
