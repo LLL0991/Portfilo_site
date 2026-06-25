@@ -33,10 +33,16 @@ type KieRecordData = {
   progress?: string;
   response?:
     | {
+        resultUrl?: string;
+        result_url?: string;
         resultUrls?: string[];
+        result_urls?: string[];
       }
     | string;
+  resultUrl?: string;
+  result_url?: string;
   resultUrls?: string[];
+  result_urls?: string[];
   state?: string;
   status?: string;
   successFlag?: number;
@@ -294,15 +300,40 @@ const extractKieResultUrl = (payload: KieResponse & { rawText?: string }) => {
 
   if (typeof data.response === "string") {
     try {
-      const parsed = JSON.parse(data.response) as { resultUrls?: string[] };
+      const parsed = JSON.parse(data.response) as {
+        resultUrl?: string;
+        result_url?: string;
+        resultUrls?: string[];
+        result_urls?: string[];
+      };
 
-      return data.resultUrls?.[0] ?? parsed.resultUrls?.[0] ?? null;
+      return (
+        data.resultUrls?.[0] ??
+        data.result_urls?.[0] ??
+        data.resultUrl ??
+        data.result_url ??
+        parsed.resultUrls?.[0] ??
+        parsed.result_urls?.[0] ??
+        parsed.resultUrl ??
+        parsed.result_url ??
+        null
+      );
     } catch {
-      return data.resultUrls?.[0] ?? null;
+      return data.resultUrls?.[0] ?? data.result_urls?.[0] ?? data.resultUrl ?? data.result_url ?? null;
     }
   }
 
-  return data.resultUrls?.[0] ?? data.response?.resultUrls?.[0] ?? null;
+  return (
+    data.resultUrls?.[0] ??
+    data.result_urls?.[0] ??
+    data.resultUrl ??
+    data.result_url ??
+    data.response?.resultUrls?.[0] ??
+    data.response?.result_urls?.[0] ??
+    data.response?.resultUrl ??
+    data.response?.result_url ??
+    null
+  );
 };
 
 const getDirectKieDownloadUrl = async (taskId: string, url: string) => {
@@ -539,6 +570,16 @@ const stylizeWithKie = async (inputImage: File, reference: ReturnType<typeof get
     }
 
     if (!recordResponse.ok) {
+      if (isRetryableStatus(recordResponse.status)) {
+        if (isStylizeDebugEnabled()) {
+          console.info("[stylize:kie:record:retry]", {
+            shape: describeKiePayloadShape(recordPayload),
+            status: recordResponse.status,
+          });
+        }
+        continue;
+      }
+
       throw new Error(getKieError(recordPayload, "Kie record query failed"));
     }
 
