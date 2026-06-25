@@ -62,6 +62,8 @@ const hoverPreviewCovers: Record<string, string> = {
   square: "/images/projects/hover-preview/square.jpg",
 };
 
+const hoverPreviewCoverSources = Array.from(new Set(Object.values(hoverPreviewCovers)));
+
 const projectDetailExitMs = 1000;
 
 function hasCjk(text: string) {
@@ -179,6 +181,21 @@ export function ProjectIndexWithDrawer({
   const hoverProjectCover = hoverProject ? (hoverPreviewCovers[hoverProject.key] ?? hoverProject.cover) : "";
   const hoverProjectAspect = hoverProject ? (coverAspects[hoverProject.key] ?? 16 / 10) : 16 / 10;
   const isOpen = Boolean(activeProject);
+
+  useEffect(() => {
+    const preloadedImages = hoverPreviewCoverSources.map((src) => {
+      const image = new window.Image();
+      image.decoding = "async";
+      image.src = src;
+      return image;
+    });
+
+    return () => {
+      preloadedImages.forEach((image) => {
+        image.src = "";
+      });
+    };
+  }, []);
 
   const updateHoverPreview = useCallback((projectKey: string, clientX: number, clientY: number) => {
     const previewAspect = coverAspects[projectKey] ?? 16 / 10;
