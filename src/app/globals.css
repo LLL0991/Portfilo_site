@@ -461,6 +461,10 @@ body {
   .projects-horizontal-stylize-panel .stylize-print-bay {
     top: clamp(32px, 4vw, 48px);
   }
+
+  .projects-horizontal-stylize-panel .stylize-style-hero {
+    transform: translateY(-16px);
+  }
 }
 
 .project-index-heading {
@@ -2282,12 +2286,12 @@ body {
 }
 
 .stylize-mini-status {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.86);
+  border-bottom: 1px solid #8CFFFD;
   padding-bottom: clamp(8px, 1vw, 12px);
-  color: #fff;
-  font-family: Helvetica, Arial, sans-serif;
+  color: #8CFFFD;
+  font-family: var(--font-ibm-plex-mono), "IBM Plex Mono", monospace;
   font-size: clamp(20px, 2.1vw, 25px);
-  font-weight: 800;
+  font-weight: 400;
   line-height: 0.95;
 }
 
