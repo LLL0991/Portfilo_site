@@ -124,7 +124,7 @@ export default async function HomePage({ params }: HomePageProps) {
               </h2>
             </div>
 
-            <div className="-mt-5 projects-horizontal-viewport md:-mt-6 xl:-mt-2 2xl:mt-0" data-projects-horizontal-viewport>
+            <div className="mt-6 projects-horizontal-viewport md:mt-7 xl:mt-8 2xl:mt-10" data-projects-horizontal-viewport>
               <div className="projects-horizontal-track" data-projects-horizontal-track>
             <div
               className="projects-horizontal-panel projects-horizontal-featured-panel relative z-10 flex min-h-0 items-center justify-center py-2 sm:py-3"

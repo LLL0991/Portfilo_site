@@ -796,6 +796,22 @@ export function HomeMotion({ children }: HomeMotionProps) {
           anticipatePin: 1,
           invalidateOnRefresh: true,
         });
+
+        gsap.fromTo(
+          heroStage,
+          { y: 0 },
+          {
+            y: () => -(window.innerHeight - (topTelemetry?.offsetHeight || 54)),
+            ease: "none",
+            scrollTrigger: {
+              trigger: "[data-mark-strip]",
+              start: "top bottom",
+              end: "bottom top",
+              scrub: true,
+              invalidateOnRefresh: true,
+            },
+          },
+        );
       }
 
       const introCard = document.querySelector<HTMLElement>("[data-intro-card]");
