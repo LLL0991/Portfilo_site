@@ -405,13 +405,16 @@ body {
 }
 
 .projects-horizontal-stylize-panel .stylize-mini-actions {
-  gap: 16px;
-  padding-top: 6px;
+  gap: calc(16px * var(--stylize-panel-scale));
+  padding-top: calc(6px * var(--stylize-panel-scale));
 }
 
 .projects-horizontal-stylize-panel .stylize-mini-actions button {
   overflow: visible;
-  font-size: 12px;
+  width: min(calc(112px * var(--stylize-panel-scale)), 100%);
+  height: calc(32px * var(--stylize-panel-scale));
+  font-size: calc(12px * var(--stylize-panel-scale));
+  padding-inline: calc(18px * var(--stylize-panel-scale));
   text-overflow: initial;
 }
 
@@ -448,6 +451,15 @@ body {
 @media (max-width: 1680px) {
   .projects-horizontal-stylize-panel .stylize-mini-stage {
     --stylize-camera-open-shift: clamp(165px, calc(var(--stylize-panel-width) * 0.175), 202px);
+  }
+
+  .projects-horizontal-stylize-panel .stylize-camera-wrap {
+    --stylize-camera-print-shift: calc(var(--stylize-camera-open-shift) - 12px);
+    --stylize-camera-print-y: calc(-82% - 142px);
+  }
+
+  .projects-horizontal-stylize-panel .stylize-print-bay {
+    top: clamp(32px, 4vw, 48px);
   }
 }
 
@@ -1905,6 +1917,7 @@ body {
 
 .stylize-mini-stage {
   --stylize-camera-open-shift: clamp(152px, 16vw, 190px);
+  --stylize-camera-print-shift: var(--stylize-camera-open-shift);
   --stylize-camera-width: clamp(450px, 46vw, 620px);
   position: absolute;
   inset: 0;
@@ -2005,6 +2018,14 @@ body {
   height: 9.7%;
   width: 8.2%;
   border-radius: 6px;
+}
+
+.stylize-camera-shutter {
+  left: 9%;
+  top: 42.4%;
+  height: 9.5%;
+  width: 8.5%;
+  border-radius: 999px;
 }
 
 .stylize-print-bay {
@@ -2114,7 +2135,7 @@ body {
 
 .stylize-studio.is-printing .stylize-camera-wrap,
 .stylize-studio.is-done .stylize-camera-wrap {
-  transform: translate(calc(-50% - var(--stylize-camera-open-shift)), var(--stylize-camera-print-y)) !important;
+  transform: translate(calc(-50% - var(--stylize-camera-print-shift)), var(--stylize-camera-print-y)) !important;
 }
 
 .stylize-studio.is-printing .stylize-print-bay,
@@ -2358,32 +2379,50 @@ body {
 
 .stylize-mini-actions button {
   border: 0;
-  background: transparent;
-  color: #8cfffd;
+  border-radius: 999px;
+  background: #8CFFFD;
+  color: #111;
   cursor: pointer;
+  display: inline-flex;
+  width: min(112px, 100%);
+  height: 32px;
+  align-items: center;
+  justify-content: center;
   font-family: var(--font-ibm-plex-mono), "IBM Plex Mono", monospace;
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: -0.4px;
   line-height: normal;
-  padding: 0;
-  text-align: left;
+  padding: 0 18px;
+  text-align: center;
   white-space: nowrap;
 }
 
 .stylize-mini-actions button:last-child {
-  text-align: right;
+  justify-self: end;
+  background: rgba(171, 144, 144, 0.72);
+  color: #8CFFFD;
 }
 
 .stylize-mini-actions button:hover,
 .stylize-mini-actions .is-download-ready {
-  color: #8cfffd;
+  color: #111;
+}
+
+.stylize-mini-actions .is-download-ready {
+  background: #8CFFFD;
+}
+
+.stylize-mini-actions button:first-child:hover {
+  color: #111;
 }
 
 .stylize-mini-actions button:disabled,
 .stylize-mini-actions button[aria-disabled="true"] {
-  color: rgba(140, 255, 253, 0.46);
+  background: rgba(171, 144, 144, 0.72);
+  color: #8CFFFD;
   cursor: default;
+  opacity: 1;
 }
 
 .stylize-style-scroll {

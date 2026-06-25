@@ -508,7 +508,7 @@ const stylizeWithKie = async (inputImage: File, reference: ReturnType<typeof get
       isEnhance: process.env.KIE_IMAGE_ENHANCE === "true",
       prompt: buildKiePrompt(prompt, styleId),
       size: process.env.KIE_IMAGE_SIZE ?? "1:1",
-      uploadCn: process.env.KIE_UPLOAD_CN === "true",
+      upload_method: process.env.KIE_UPLOAD_METHOD ?? "oss",
     }),
     headers: {
       Authorization: `Bearer ${key}`,

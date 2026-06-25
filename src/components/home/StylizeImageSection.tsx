@@ -673,6 +673,32 @@ export function StylizeImageSection({
                   fileInputRef.current?.click();
                 }}
               />
+              <button
+                type="button"
+                className="stylize-camera-hit stylize-camera-shutter"
+                aria-label="Stylize image"
+                onClick={(event) => {
+                  event.preventDefault();
+                  event.stopPropagation();
+
+                  if (status === "stylizing") {
+                    return;
+                  }
+
+                  if (!sourceUrl) {
+                    fileInputRef.current?.click();
+                    return;
+                  }
+
+                  if (!active) {
+                    openDrawer();
+                    setError("PICK A STYLE FIRST");
+                    return;
+                  }
+
+                  void generate();
+                }}
+              />
             </div>
 
             <div className="stylize-print-bay" data-stylize-print>
@@ -721,7 +747,7 @@ export function StylizeImageSection({
                     </div>
                     <div className="stylize-mini-actions">
                       <button type="button" onClick={() => void generate()} disabled={!canStylize}>
-                        [ {status === "stylizing" ? "Wait" : "Stylize"} ]
+                        {status === "stylizing" ? "Wait" : "Stylize"}
                       </button>
                       <button
                         className={resultUrl ? "is-download-ready" : ""}
@@ -736,7 +762,7 @@ export function StylizeImageSection({
                           void downloadResult();
                         }}
                       >
-                        [ Download ]
+                        Download
                       </button>
                     </div>
                   </div>
