@@ -1,7 +1,10 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import { Aboreto } from "next/font/google";
+import { HeroCursorTrail } from "@/components/home/HeroCursorTrail";
+import { HeroElasticGrid } from "@/components/home/HeroElasticGrid";
 import { HeroImageSequence } from "@/components/home/HeroImageSequence";
+import { HeroEmojiBurst } from "@/components/home/HeroEmojiBurst";
 import { IntroScaleBlock } from "@/components/home/IntroScaleBlock";
 import { IntroSpaceStage } from "@/components/home/IntroSpaceStage";
 import { LiveLocalTime } from "@/components/layout/LiveLocalTime";
@@ -857,9 +860,10 @@ function HeroGallery() {
           src="/images/home/hero-card-liang.svg"
           alt="Liang Dai 2025 graphic card"
           fill
-          className="object-contain drop-shadow-[8px_8px_0_rgba(0,0,0,0.38)]"
+          className="hero-liang-card-image object-contain drop-shadow-[8px_8px_10px_rgba(0,0,0,0.34)]"
           sizes="300px"
         />
+        <HeroEmojiBurst label="Burst emoji from Liang Dai graphic card" />
       </div>
 
       <div
@@ -874,6 +878,7 @@ function HeroGallery() {
           className="object-contain drop-shadow-[0_0_18px_rgba(126,243,240,0.28)]"
           sizes="250px"
         />
+        <HeroCursorTrail bounds={{ left: 0, top: 0, width: 100, height: 100 }} />
       </div>
 
       <div
@@ -888,6 +893,7 @@ function HeroGallery() {
           className="object-contain"
           sizes="420px"
         />
+        <HeroElasticGrid bounds={{ left: 2.58, top: 33.08, width: 87.98, height: 54.23 }} />
       </div>
 
       <div

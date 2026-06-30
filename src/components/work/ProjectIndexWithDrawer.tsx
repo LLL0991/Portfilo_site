@@ -3,6 +3,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import Image from "next/image";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import type { Project } from "@/types/project";
 
 type Locale = "zh" | "en";
@@ -47,7 +48,7 @@ const fallbackCovers = [
 ];
 
 const hoverPreviewCovers: Record<string, string> = {
-  "adora-magic-city": "/images/projects/hover-preview/adora-magic-city-custom.jpg",
+  "adora-magic-city": "/images/projects/hover-preview/adora-magic-city-overview.png",
   dokie: "/images/projects/hover-preview/dokie-custom.jpg",
   fabrie: "/images/projects/hover-preview/fabrie-custom.jpg",
   nla: "/images/projects/hover-preview/nla-custom.jpg",
@@ -68,6 +69,14 @@ const projectDetailExitMs = 1000;
 
 function hasCjk(text: string) {
   return /[\u3400-\u9fff]/.test(text);
+}
+
+function getProjectListLabel(project: DrawerProject) {
+  if (project.category === "personal") {
+    return project.title;
+  }
+
+  return project.client || project.title;
 }
 
 function slugFromItem(item: ProjectIndexItem) {
@@ -115,6 +124,7 @@ export function ProjectIndexWithDrawer({
   projects,
 }: ProjectIndexWithDrawerProps) {
   const [activeKey, setActiveKey] = useState<string | null>(null);
+  const [expandedGroup, setExpandedGroup] = useState<string | null>(null);
   const [hoverPreview, setHoverPreview] = useState<{
     height: number;
     key: string;
@@ -127,6 +137,7 @@ export function ProjectIndexWithDrawer({
   const activeKeyRef = useRef<string | null>(null);
   const isClosingRef = useRef(false);
   const closeTimeoutRef = useRef<number | null>(null);
+  const projectIndexRef = useRef<HTMLDivElement | null>(null);
   const localizedProjects = useMemo(() => {
     const bySlug = new Map(projects.map((project) => [project.slug, project]));
     const flatItems = groups.flatMap((group) =>
@@ -181,6 +192,29 @@ export function ProjectIndexWithDrawer({
   const hoverProjectCover = hoverProject ? (hoverPreviewCovers[hoverProject.key] ?? hoverProject.cover) : "";
   const hoverProjectAspect = hoverProject ? (coverAspects[hoverProject.key] ?? 16 / 10) : 16 / 10;
   const isOpen = Boolean(activeProject);
+  const getProjectKeyForItem = useCallback((group: ProjectIndexGroup, item: ProjectIndexItem, itemIndex: number) => {
+    return (
+      localizedProjects.find((project) => project.key === slugFromItem(item))?.key ??
+      `${group.number}-${itemIndex}-${slugFromItem(item)}`
+    );
+  }, [localizedProjects]);
+
+  useEffect(() => {
+    let secondFrame = 0;
+    const firstFrame = window.requestAnimationFrame(() => {
+      ScrollTrigger.refresh();
+      secondFrame = window.requestAnimationFrame(() => {
+        ScrollTrigger.refresh();
+      });
+    });
+
+    return () => {
+      window.cancelAnimationFrame(firstFrame);
+      if (secondFrame) {
+        window.cancelAnimationFrame(secondFrame);
+      }
+    };
+  }, [expandedGroup]);
 
   useEffect(() => {
     const preloadedImages = hoverPreviewCoverSources.map((src) => {
@@ -197,18 +231,30 @@ export function ProjectIndexWithDrawer({
     };
   }, []);
 
-  const updateHoverPreview = useCallback((projectKey: string, clientX: number, clientY: number) => {
+  const updateHoverPreview = useCallback((projectKey: string) => {
     const previewAspect = coverAspects[projectKey] ?? 16 / 10;
-    const previewHeight = 212.5;
-    const previewWidth = previewHeight * previewAspect;
+    const containerRect = projectIndexRef.current?.getBoundingClientRect();
+    const rightInset = 116;
+    const fallbackLeft = window.innerWidth * 0.64;
+    const availableLeft = containerRect
+      ? containerRect.left + containerRect.width * 0.66
+      : fallbackLeft;
+    const availableRight = containerRect
+      ? containerRect.right - rightInset
+      : window.innerWidth - rightInset;
+    const availableWidth = Math.max(180, availableRight - availableLeft);
+    const previewHeight = Math.min(380, Math.max(220, window.innerHeight * 0.28));
+    const previewWidth = Math.min(previewHeight * previewAspect, availableWidth);
     const x = Math.min(
-      Math.max(clientX + 28, 16),
+      Math.max(availableLeft, 16),
       Math.max(window.innerWidth - previewWidth - 16, 16),
     );
-    const y = Math.min(
-      Math.max(clientY - previewHeight * 0.42, 16),
-      Math.max(window.innerHeight - previewHeight - 16, 16),
-    );
+    const y = containerRect
+      ? Math.min(
+          Math.max(containerRect.top + containerRect.height * 0.2, 16),
+          Math.max(window.innerHeight - previewHeight - 16, 16),
+        )
+      : Math.max((window.innerHeight - previewHeight) / 2, 16);
 
     setHoverPreview({ height: previewHeight, key: projectKey, width: previewWidth, x, y });
   }, [coverAspects]);
@@ -452,56 +498,100 @@ export function ProjectIndexWithDrawer({
   return (
     <>
       <div
-        className="relative z-20 -mt-3 pt-6 font-[Helvetica,Arial,sans-serif] md:-mt-4 md:pt-6 xl:pt-9 2xl:pt-12"
+        className="project-index-accordion relative z-20 font-[Helvetica,Arial,sans-serif]"
         data-project-index
+        ref={projectIndexRef}
       >
-        <div
-          className="absolute left-0 top-0 h-px w-full origin-left bg-[#ff382e]"
-          data-project-index-line
-        />
-        <div className="grid gap-y-12 sm:grid-cols-2 sm:gap-x-10 lg:grid-cols-4 lg:gap-x-16">
-          {groups.map((group) => (
-            <div key={group.number} className="min-w-0" data-project-index-group>
-              <h3 className="project-index-heading mb-6 flex items-baseline gap-[0.08em] font-medium leading-none tracking-normal text-[#fff4e4] transition-colors">
-                <span>{group.number}</span>
-                <span>{group.title}</span>
-              </h3>
-              <div className="project-index-items grid font-medium leading-tight tracking-normal text-[#fff4e4]/32">
-                {group.items.map((item, itemIndex) => {
-                  const projectKey =
-                    localizedProjects.find((project) => project.key === slugFromItem(item))?.key ??
-                    `${group.number}-${itemIndex}-${slugFromItem(item)}`;
-
-                  return (
-                    <button
-                      key={`${group.number}-${item.label}-${itemIndex}`}
-                      type="button"
-                      className="w-fit text-left transition-colors hover:text-[#ff382e]"
-                      data-project-index-item
-                      onClick={() => openProject(projectKey)}
-                      onBlur={() => setHoverPreview(null)}
-                      onFocus={(event) => {
-                        const rect = event.currentTarget.getBoundingClientRect();
-
-                        updateHoverPreview(projectKey, rect.right, rect.top + rect.height / 2);
-                      }}
-                      onPointerEnter={(event) => {
-                        updateHoverPreview(projectKey, event.clientX, event.clientY);
-                      }}
-                      onPointerLeave={() => setHoverPreview(null)}
-                      onPointerMove={(event) => {
-                        updateHoverPreview(projectKey, event.clientX, event.clientY);
-                      }}
-                    >
-                      <span className="transition-colors">
-                        {String(itemIndex + 1).padStart(2, "0")}/{item.label}
+        <div className="project-index-title-wrap" data-project-index-line data-project-index-title-wrap>
+          <h2 className="project-index-title" data-project-index-title>Selected Works</h2>
+        </div>
+        <div className="project-index-accordion-list">
+          {groups.map((group) => {
+            const isExpanded = expandedGroup === group.number;
+            const firstProjectKey = group.items[0]
+              ? getProjectKeyForItem(group, group.items[0], 0)
+              : null;
+            return (
+              <section
+                key={group.number}
+                className="project-index-row"
+                data-expanded={isExpanded ? "true" : "false"}
+                data-project-index-group
+              >
+                <button
+                  type="button"
+                  className="project-index-row-trigger"
+                  data-project-index-row-content
+                  onClick={() => {
+                    setExpandedGroup((current) => current === group.number ? null : group.number);
+                  }}
+                  onBlur={() => setHoverPreview(null)}
+                  onFocus={() => {
+                    if (firstProjectKey) {
+                      updateHoverPreview(firstProjectKey);
+                    }
+                  }}
+                  onPointerEnter={() => {
+                    if (firstProjectKey) {
+                      updateHoverPreview(firstProjectKey);
+                    }
+                  }}
+                  onPointerLeave={() => setHoverPreview(null)}
+                  onPointerMove={() => {
+                    if (firstProjectKey) {
+                      updateHoverPreview(firstProjectKey);
+                    }
+                  }}
+                >
+                  <span className="project-index-row-title">
+                    <span className="project-index-row-title-mask" data-project-index-row-text-mask>
+                      <span className="project-index-row-title-cut" data-project-index-row-text>
+                        <span className="project-index-row-number">{group.number}</span>
+                        <span>{group.title}</span>
                       </span>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          ))}
+                    </span>
+                  </span>
+                  <span className="project-index-row-mark-mask" data-project-index-row-mark-mask aria-hidden="true">
+                    <span className="project-index-row-mark" data-project-index-row-mark>
+                      <Image
+                        src={isExpanded ? "/images/home/projects/catalog-close.svg" : "/images/home/projects/catalog-open.svg"}
+                        alt=""
+                        width={37}
+                        height={37}
+                      />
+                    </span>
+                  </span>
+                </button>
+
+                {isExpanded ? (
+                  <div className="project-index-items" data-project-index-items>
+                    {group.items.map((item, itemIndex) => {
+                      const projectKey = getProjectKeyForItem(group, item, itemIndex);
+                      const isSelected = activeKey === projectKey;
+
+                      return (
+                        <button
+                          key={`${group.number}-${item.label}-${itemIndex}`}
+                          type="button"
+                          className="project-index-item"
+                          data-active={isSelected ? "true" : "false"}
+                          data-project-index-item
+                          onClick={() => openProject(projectKey)}
+                          onBlur={() => setHoverPreview(null)}
+                          onFocus={() => updateHoverPreview(projectKey)}
+                          onPointerEnter={() => updateHoverPreview(projectKey)}
+                          onPointerLeave={() => setHoverPreview(null)}
+                          onPointerMove={() => updateHoverPreview(projectKey)}
+                        >
+                          {item.label}
+                        </button>
+                      );
+                    })}
+                  </div>
+                ) : null}
+              </section>
+            );
+          })}
         </div>
       </div>
 
@@ -575,14 +665,31 @@ function ProjectDetailDrawer({
   projects: DrawerProject[];
 }) {
   const activeProject = projects.find((project) => project.key === activeKey) ?? projects[0];
+  const detailCategoryClass = `is-${activeProject.category}-detail`;
+  const detailStyle = activeProject.category;
+  const categoryTabs = [
+    { category: "display", label: "Adora Magic City" },
+    { category: "brand", label: "Visual Identity" },
+    { category: "motion", label: "Motions & others" },
+    { category: "personal", label: "PPPP" },
+  ]
+    .map((tab) => ({
+      ...tab,
+      project: projects.find((project) => project.category === tab.category),
+    }))
+    .filter((tab): tab is { category: string; label: string; project: DrawerProject } => Boolean(tab.project));
+  const categoryProjects = projects.filter((project) => project.category === activeProject.category);
   const galleryImages =
     activeProject.images.length > 0 ? activeProject.images : activeProject.videos.length > 0 ? [] : [activeProject.cover];
   const galleryVideos = activeProject.videos;
 
   return (
     <div
-      className="project-detail-overlay"
+      className={`project-detail-overlay ${detailCategoryClass}`}
       data-closing={isClosing ? "true" : undefined}
+      data-detail-style={detailStyle}
+      data-project-category={activeProject.category}
+      data-project-key={activeProject.key}
       data-project-detail-open="true"
       role="dialog"
       aria-modal="true"
@@ -597,7 +704,7 @@ function ProjectDetailDrawer({
         <div className="project-detail-shell">
           <div className="project-detail-rail" />
 
-          <aside className="project-detail-sidebar">
+          <aside className={`project-detail-sidebar ${detailCategoryClass}-sidebar`}>
             <button
               type="button"
               className="project-detail-close"
@@ -614,21 +721,37 @@ function ProjectDetailDrawer({
               <p className="project-detail-summary project-detail-trail">{activeProject.intro}</p>
             </div>
 
-            <div className="project-detail-tabs" aria-label="Project list">
-              {projects.slice(0, 8).map((project) => (
+            <div className="project-detail-tabs" aria-label="Project categories">
+              {categoryTabs.map((tab) => (
                 <button
-                  key={project.key}
+                  key={tab.category}
                   type="button"
                   className="project-detail-tab"
-                  data-active={project.key === activeKey}
-                  onClick={() => onSelect(project.key)}
+                  data-active={activeProject.category === tab.category}
+                  onClick={() => onSelect(tab.project.key)}
                 >
                   <span className="project-detail-tab-shell">
-                    <span className="project-detail-tab-label">{project.client || project.title}</span>
+                    <span className="project-detail-tab-label">{tab.label}</span>
                   </span>
                 </button>
               ))}
             </div>
+
+            {categoryProjects.length > 1 ? (
+              <div className="project-detail-category-list" aria-label="Projects in current category">
+                {categoryProjects.map((project) => (
+                  <button
+                    key={project.key}
+                    type="button"
+                    className="project-detail-category-item"
+                    data-active={project.key === activeProject.key}
+                    onClick={() => onSelect(project.key)}
+                  >
+                    {getProjectListLabel(project)}
+                  </button>
+                ))}
+              </div>
+            ) : null}
           </aside>
 
           <section className="project-detail-gallery" aria-label={`${activeProject.title} media`} tabIndex={0}>

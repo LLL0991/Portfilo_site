@@ -13,8 +13,18 @@ const GROW_MS = 340;
 const GROW_START_THRESHOLD = 0.8;
 const BACKDROP_BRIDGE_MAX_MS = 1800;
 
+const getInitialPhase = (): LoadingPhase => {
+  if (typeof window === "undefined") {
+    return "visible";
+  }
+
+  const searchParams = new URLSearchParams(window.location.search);
+
+  return searchParams.get("skipLoading") === "1" ? "done" : "visible";
+};
+
 export function EntryLoadingScreen() {
-  const [phase, setPhase] = useState<LoadingPhase>("visible");
+  const [phase, setPhase] = useState<LoadingPhase>(getInitialPhase);
   const [progress, setProgress] = useState(0);
   const [settleProgress, setSettleProgress] = useState(0);
   const [growProgress, setGrowProgress] = useState(0);

@@ -746,11 +746,16 @@ export function StylizeImageSection({
                       <span className="stylize-mini-progress-value">{displayedProgress}%</span>
                     </div>
                     <div className="stylize-mini-actions">
-                      <button type="button" onClick={() => void generate()} disabled={!canStylize}>
+                      <button
+                        className={canStylize ? "is-action-ready" : ""}
+                        type="button"
+                        onClick={() => void generate()}
+                        disabled={!canStylize}
+                      >
                         {status === "stylizing" ? "Wait" : "Stylize"}
                       </button>
                       <button
-                        className={resultUrl ? "is-download-ready" : ""}
+                        className={resultUrl ? "is-action-ready is-download-ready" : ""}
                         aria-disabled={!resultUrl}
                         type="button"
                         disabled={!resultUrl}

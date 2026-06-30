@@ -973,7 +973,13 @@ export function HomeMotion({ children }: HomeMotionProps) {
       const featuredHeading = document.querySelector<HTMLElement>("[data-featured-heading]");
       const projectIndex = document.querySelector<HTMLElement>("[data-project-index]");
       const projectIndexLine = document.querySelector<HTMLElement>("[data-project-index-line]");
+      const projectIndexTitle = document.querySelector<HTMLElement>("[data-project-index-title]");
+      const projectIndexTitleWrap = document.querySelector<HTMLElement>("[data-project-index-title-wrap]");
       const projectIndexGroups = gsap.utils.toArray<HTMLElement>("[data-project-index-group]");
+      const projectIndexRowTextMasks = gsap.utils.toArray<HTMLElement>("[data-project-index-row-text-mask]");
+      const projectIndexRowTexts = gsap.utils.toArray<HTMLElement>("[data-project-index-row-text]");
+      const projectIndexRowMarkMasks = gsap.utils.toArray<HTMLElement>("[data-project-index-row-mark-mask]");
+      const projectIndexRowMarks = gsap.utils.toArray<HTMLElement>("[data-project-index-row-mark]");
       const trapezoidTop = document.querySelector<HTMLElement>("[data-trapezoid-top]");
       const trapezoidLight = document.querySelector<HTMLElement>("[data-trapezoid-light]");
       const trapezoidBottom = document.querySelector<HTMLElement>("[data-trapezoid-bottom]");
@@ -984,7 +990,6 @@ export function HomeMotion({ children }: HomeMotionProps) {
       );
       const trapezoidTopPath =
         document.querySelector<SVGPathElement>("[data-trapezoid-top-path]");
-      const projectIndexHold = { progress: 0 };
       const projectsHorizontalViewport = document.querySelector<HTMLElement>(
         "[data-projects-horizontal-viewport]",
       );
@@ -1016,10 +1021,10 @@ export function HomeMotion({ children }: HomeMotionProps) {
         ScrollTrigger.removeEventListener("refreshInit", refreshHorizontalGallery);
       });
 
-      if (featuredCard && featuredAssemblyTrigger && featuredParts.length > 0) {
-        const activeFeaturedCard = featuredCard;
+        if (featuredCard && featuredAssemblyTrigger && featuredParts.length > 0) {
+          const activeFeaturedCard = featuredCard;
 
-        activeFeaturedCard.dataset.featuredProgress = "0";
+          activeFeaturedCard.dataset.featuredProgress = "0";
         featuredLagParts.forEach((part, index) => {
           const lag = Number(part.dataset.featuredLag ?? 0.18 + index * 0.018);
           const entryX = Number(part.dataset.entryX ?? (index % 2 === 0 ? -18 : 18));
@@ -1368,13 +1373,34 @@ export function HomeMotion({ children }: HomeMotionProps) {
             y: 0,
           });
           gsap.set(projectIndexLine, {
-            scaleX: 0,
-            transformOrigin: "0% 50%",
+            "--project-index-line-scale": 0,
           });
+          if (projectIndexTitleWrap) {
+            gsap.set(projectIndexTitleWrap, {
+              "--project-index-divider-scale": 0,
+            });
+          }
           gsap.set(projectIndexGroups, {
-            y: 34,
-            autoAlpha: 0,
+            "--project-index-row-line-scale": 0,
           });
+          gsap.set(projectIndexRowTextMasks, {
+            clipPath: "inset(100% 0 0 0)",
+          });
+          gsap.set(projectIndexRowTexts, {
+            y: 18,
+          });
+          gsap.set(projectIndexRowMarkMasks, {
+            clipPath: "inset(100% 0 0 0)",
+          });
+          gsap.set(projectIndexRowMarks, {
+            y: 18,
+          });
+          if (projectIndexTitle) {
+            gsap.set(projectIndexTitle, {
+              y: 34,
+              autoAlpha: 0,
+            });
+          }
 
           if (featuredStage) {
             featuredAssembly.to(
@@ -1389,44 +1415,111 @@ export function HomeMotion({ children }: HomeMotionProps) {
           }
 
           featuredAssembly.to(
-            projectIndex,
-            {
-              y: -96,
-              ease: "none",
-              duration: 0.56,
-            },
-            0.78,
-          );
-
-          featuredAssembly.to(
             projectIndexLine,
             {
-              scaleX: 1,
+              "--project-index-line-scale": 1,
               ease: "none",
               duration: 0.34,
             },
             1.34,
           );
-          featuredAssembly.to(
-            projectIndexGroups,
-            {
-              y: 0,
-              autoAlpha: 1,
-              ease: "power3.out",
-              stagger: 0.085,
-              duration: 0.66,
+
+          if (projectIndexTitle) {
+            featuredAssembly.to(
+              projectIndexTitle,
+              {
+                y: 0,
+                autoAlpha: 1,
+                ease: "none",
+                duration: 0.42,
+              },
+              3.52,
+            );
+          }
+
+          const projectIndexReveal = gsap.timeline({
+            scrollTrigger: {
+              trigger: projectIndex,
+              start: () => (featuredAssembly.scrollTrigger?.end ?? 0) + 1,
+              end: () =>
+                (featuredAssembly.scrollTrigger?.end ?? 0) +
+                Math.min(720, window.innerHeight * 0.7),
+              scrub: 0.35,
+              invalidateOnRefresh: true,
             },
-            1.68,
-          );
-          featuredAssembly.to(
-            projectIndexHold,
-            {
-              progress: 1,
-              ease: "none",
-              duration: 0.65,
-            },
-            ">",
-          );
+          });
+
+          if (projectIndexTitleWrap) {
+            projectIndexReveal.to(
+              projectIndexTitleWrap,
+              {
+                "--project-index-divider-scale": 1,
+                ease: "none",
+                duration: 0.18,
+              },
+              0,
+            );
+          }
+
+          projectIndexGroups.forEach((group, index) => {
+            const rowTextMask = projectIndexRowTextMasks[index];
+            const rowText = projectIndexRowTexts[index];
+            const rowMarkMask = projectIndexRowMarkMasks[index];
+            const rowMark = projectIndexRowMarks[index];
+            const rowStart = 0.2 + index * 0.36;
+
+            if (rowTextMask && rowText) {
+              projectIndexReveal.to(
+                rowTextMask,
+                {
+                  clipPath: "inset(0% 0 0 0)",
+                  ease: "none",
+                  duration: 0.1,
+                },
+                rowStart,
+              );
+              projectIndexReveal.to(
+                rowText,
+                {
+                  y: 0,
+                  ease: "none",
+                  duration: 0.1,
+                },
+                rowStart,
+              );
+            }
+
+            if (rowMarkMask && rowMark) {
+              projectIndexReveal.to(
+                rowMarkMask,
+                {
+                  clipPath: "inset(0% 0 0 0)",
+                  ease: "none",
+                  duration: 0.1,
+                },
+                rowStart + 0.1,
+              );
+              projectIndexReveal.to(
+                rowMark,
+                {
+                  y: 0,
+                  ease: "none",
+                  duration: 0.1,
+                },
+                rowStart + 0.1,
+              );
+            }
+
+            projectIndexReveal.to(
+              group,
+              {
+                "--project-index-row-line-scale": 1,
+                ease: "none",
+                duration: 0.12,
+              },
+              rowStart + 0.2,
+            );
+          });
         }
 
         if (projectsHorizontalTrack) {
@@ -1450,7 +1543,7 @@ export function HomeMotion({ children }: HomeMotionProps) {
         featuredAssembly.to(
           {},
           {
-            duration: 0.82,
+            duration: 0.2,
           },
         );
       }
